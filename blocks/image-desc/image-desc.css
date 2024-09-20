@@ -1,0 +1,9 @@
+.image-desc>div {
+    display: flex;
+    align-items: center;
+}
+
+.image-desc>div>div {
+    flex: 1;
+    order: unset;
+}

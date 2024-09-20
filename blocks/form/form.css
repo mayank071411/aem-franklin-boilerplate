@@ -1,0 +1,125 @@
+main .form {
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+  filter: var(--image-filter-drop-shadow-small);
+  border: solid 1px grey;
+}
+
+main .form h2 {
+  padding: 10px 0;
+  font-size: 48px;
+}
+
+main .form h3 {
+  padding-top: 10px;
+  font-size: 36px;
+}
+
+main .form input,
+main .form textarea,
+main .form select {
+  border: solid 1px grey;
+  padding: 8px 16px;
+  width: 100%;
+  max-width: 50rem;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+main .form textarea {
+  min-height: 100px;
+}
+
+main .form input:hover,
+main .form select:hover {
+  border-color: rgb(239, 211, 211);
+}
+
+main .form label {
+  display: block;
+  padding-bottom: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+main .form label.required::after {
+  content: "*";
+  color: black;
+  padding-left: 4px;
+}
+
+main .form .field-wrapper {
+  margin-bottom: 12px;
+}
+
+main .form .form-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+}
+
+main .form .form-checkbox-wrapper input[type='checkbox'] {
+  appearance: none;
+
+  /* stylelint-disable */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* stylelint-enable */
+  height: 20px;
+  width: 20px;
+  position: relative;
+  border: unset;
+  padding: unset;
+  margin-right: 4px;
+  margin-left: 0;
+}
+
+main .form .form-checkbox-wrapper input[type='checkbox']::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  content: ' ';
+  background: url('./checkbox.svg');
+  background-size: contain;
+}
+
+main .form .form-checkbox-wrapper input[type='checkbox']:checked::after {
+  background: url('./checkbox-checked.svg');
+  background-size: contain;
+  content: ' ';
+}
+
+main .form .form-checkbox-wrapper label {
+  display: block;
+  font-size: 12px;
+  line-height: 14px;
+  padding-bottom: 0;
+}
+
+main .form-legal-wrapper p {
+  font-size: 12px;
+  line-height: 14px;
+  font-style: italic;
+}
+
+@media screen and (min-width: 900px) {
+  main .form {
+    padding: 16px;
+  }
+  
+  main .form .field-wrapper {
+    display: flex;
+  }
+
+  main .form label {
+    width: 72%;
+  }
+}
